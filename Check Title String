@@ -1,0 +1,10 @@
+public static boolean checkTitle(String text){
+        if(Character.isUpperCase(text.charAt(0))){
+            int nextSpace = text.indexOf(' ');
+            if(nextSpace == -1){
+                return true;
+            }
+            return checkTitle(text.substring(nextSpace + 1));
+        }
+        return false;
+    }
